@@ -12,7 +12,9 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: sensors_admin_panel_development
+  database: secrant_polling_development
+  username: <%= Rails.application.secrets[:database_username] %>
+  password: <%= Rails.application.secrets[:database_password] %>
   pool: 5
   username: root
   password: 
@@ -25,10 +27,12 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: sensors_admin_panel_test
+  database: secrant_polling_development
+  username: <%= Rails.application.secrets[:database_username] %>
+  password: <%= Rails.application.secrets[:database_password] %>
   pool: 5
   username: root
-  password: 
+  password: keving
   host: localhost
 
 production:
